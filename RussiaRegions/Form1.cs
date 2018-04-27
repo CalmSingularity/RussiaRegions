@@ -10,7 +10,7 @@ namespace RussiaRegions
 	{
 		public string Name { get; set; }
 		public string Capital { get; set; }
-		public Dictionary<string, string> Regions { get; set; }  // <string> name of a region, <string> its center
+		public Dictionary<string, string> Regions { get; set; }  // <string> name of a region and <string> its center
 
 		public FederalDistrict(string name, string capital)
 		{
@@ -90,7 +90,7 @@ namespace RussiaRegions
 				Console.WriteLine(ex.ToString());
 			}
 
-			cbFedDistrict.DataSource = new BindingSource(_fedDistricts.Keys, null);  // populate Federal Distict ComboBox
+			cbFedDistrict.DataSource = new BindingSource(_fedDistricts.Keys, null);  // populate Federal District ComboBox
 		}
 
 		private void cbFedDistrict_TextChanged(object sender, EventArgs e)
